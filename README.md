@@ -8,7 +8,7 @@
   <ul>
     <li>have a gui that serves the same functions as my <a href="https://github.com/qjlu404/chartdownloader/">chartdownloader-py</a> program </li>
     <li>have a progress bar</li>
-    <li>Have a library that can be used for future projects</li>
+    <li>Have built in functionality to convert PDFs to PNG images</li>
   </ul>
   
 </div>
