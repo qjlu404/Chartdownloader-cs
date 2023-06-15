@@ -10,5 +10,13 @@
     <li>have a progress bar</li>
     <li>Have built in functionality to convert PDFs to PNG images</li>
   </ul>
-  
+  <table>
+    <thead> Timeline: </thead>
+    <tbody>
+      <tr>
+        <td> 6.15.2023 </td>
+        <td>This is basically the initial commit. Before this it was just code copied from some tutorial website</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
