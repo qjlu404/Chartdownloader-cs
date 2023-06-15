@@ -15,7 +15,7 @@ using HtmlAgilityPack;
 
 namespace Chartdownloader_cs 
 {
-	// holy jesus i thought i lost all of my code when i used git revert 😭
+	// holy jesus i thought i lost all of my code when i used git revert 😭😭😭
 	public class Chartdownloader 
 	{
 		// TODO: include meta that indicates the cycle number, date downloaded
@@ -35,10 +35,9 @@ namespace Chartdownloader_cs
 			var todaysDate = DateTime.Now;
 			todaysDate = todaysDate.Subtract(TimeSpan.FromDays(15));
 			_Cycle = todaysDate.ToString("yyMM");
-			_Ident = "khou";
+			_Ident = "ksat";
 			_PageNumber = 1;
 			_Url = string.Format("https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/search/results/?cycle={0}&ident={1}", _Cycle, _Ident);
-
 			web = new HtmlWeb();
 			document = web.Load(_Url);
 			Charts = new();
@@ -51,7 +50,7 @@ namespace Chartdownloader_cs
 			try
 			{
 				var test = HtmlEntity.DeEntitize(document.DocumentNode.SelectSingleNode("//*[@id='content']/ul/*[last()]/a").Attributes["href"].Value);
-				Console.WriteLine("");
+				Console.WriteLine(""); // for the breakpoint
 			}
 			catch (Exception)
 			{
@@ -108,7 +107,6 @@ namespace Chartdownloader_cs
 			try
 			{
 				var uri = new Uri(Chart.Link);
-				HttpClient client = new HttpClient();
 				var response = await client.GetAsync(uri);
 				using (var fs = new FileStream(path.FinalPath + Chart.Name + ".pdf", FileMode.CreateNew))
 				{
