@@ -15,7 +15,7 @@ using HtmlAgilityPack;
 
 namespace Chartdownloader_cs 
 {
-
+	// holy jesus i thought i lost all of my code when i used git revert 😭
 	public class Chartdownloader 
 	{
 		// TODO: include meta that indicates the cycle number, date downloaded
